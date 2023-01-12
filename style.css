@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    max-width: 100%;
+}
+
+/*******************
+LAYOUT CONTAINER
+*******************/
+
+.layout-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.player-bar{
+    height: 90px;
+    background-color: #282828;
+}
+
+.main-content{
+    flex-grow: 1;
+    background-color: #141922;
+    display: flex;
+}
+
+.side-bar{
+    width: 230px;
+    background-color: black;
+}
+
+.main-bar{
+    flex-grow: 1;
+}
