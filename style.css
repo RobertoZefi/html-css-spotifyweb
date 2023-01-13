@@ -83,3 +83,46 @@ PLAYER BAR
     display: flex;
     gap: 15px;
 }
+
+
+
+.player-wrapper{
+    flex-basis: 529px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-wrapper__icon{
+    display: flex;
+    align-items: center;
+}
+
+.player-wrapper__icon i:first-child{
+    padding-right: 22px;
+}
+
+.player-wrapper__icon i:last-child{
+    padding-left: 22px;
+}
+
+.play{
+    padding: 0 32px;
+    font-size: 30px;
+}
+
+.player-wrapper__bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bar{
+    max-width: 428px;
+    height: 4px;
+    background-color: gray;
+}
+
+.progress{
+
+}
