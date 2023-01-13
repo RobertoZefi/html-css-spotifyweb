@@ -8,6 +8,10 @@ img{
     max-width: 100%;
 }
 
+.row{
+    display: flex;
+}
+
 /*******************
 LAYOUT CONTAINER
 *******************/
@@ -36,4 +40,25 @@ LAYOUT CONTAINER
 
 .main-bar{
     flex-grow: 1;
+}
+
+/*******************
+PLAYER BAR
+*******************/
+
+.player-bar{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.col-cover{
+    display: flex;
+    padding: 22px 12px;
+}
+
+.col-cover__title{
+
 }
