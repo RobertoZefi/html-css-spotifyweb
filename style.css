@@ -53,12 +53,33 @@ PLAYER BAR
     align-items: center;
 }
 
-
-.col-cover{
+.album-preview{
     display: flex;
-    padding: 22px 12px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 42px;
 }
 
-.col-cover__title{
+.album-preview__song {
+    display: flex;
+    align-items: center;
+}
 
+.album-preview figure{
+    width: 42px;
+    margin: 0 12px;
+}
+
+.album-preview__title p:first-child{
+    font-weight: bold;
+}
+
+.album-preview__title p:last-child{
+    color: gray;
+    font-size: 15px;
+}
+
+.album-preview__icon{
+    display: flex;
+    gap: 15px;
 }
