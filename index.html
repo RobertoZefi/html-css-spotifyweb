@@ -7,6 +7,9 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/4161a56faa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -14,16 +17,126 @@
 
         <div class="main-content">
             <div class="side-bar">
+                <img class="logo" src="./img/logo.svg" alt="">
 
+                <div class="search">
+                        <p><i class="side-bar__icon fa-solid fa-house"></i>Home</p>
+                        <p><i class="side-bar__icon fa-solid fa-magnifying-glass"></i>Cerca</p>
+                        <p><i class="side-bar__icon fa-solid fa-lines-leaning"></i>La tua libreria</p>
+                </div>
+
+                <div class="my-playlist">
+                    <h4 class="my-playlist__title">PLAYLIST</h4>
+                    <p class="my-playlist__sub-title"><i class="side-bar__icon plus fa-solid fa-plus"></i>Crea Playlist</p>
+                    <div class="my-playlist__collection">
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                        <p>Nome Playlist</p>
+                    </div>
+                </div>
+                
+                <div class="account">
+                    <p class="account__installer"><i class="side-bar__icon fa-regular fa-circle-down"></i>Installa app</p>
+                    <hr>
+                    <p class="account__user"><i class="side-bar__icon user fa-regular fa-user"></i>John Doe</p>
+                </div>
             </div>
+
             <div class="main-bar">
+                <header class="main-bar__head">
+                    <a class="header-button" href="#">EFFETTUA L'UPGRADE</a>
+                </header>
+
+                <main class="main-bar__body">
+                    <div class="main-bar__option">
+                        <a href="">IN EVIDENZA</a>
+                        <a href="">PODCAST</a>
+                        <a href="">CLASSIFICHE</a>
+                        <a href="">GENERI E MOOD</a>
+                        <a href="">NUOVE USCITE</a>
+                        <a href="">SCOPRI</a>
+                    </div>
+
+                    <div class="main-bar__album">
+                        <div class="recently">
+                            <h1 class="recently__title">Recently played</h1>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="./img/metal_lifting.jpg" alt="">
+                                    <h2 class="name-song">Heavy Metal</h2>
+                                    <p class="name-song__subtitle">Subtitle</p>
+                                </div>
+                                <div class="col">
+                                    <img src="./img/stranger.jpeg" alt="">
+                                    <h2 class="name-song">Stranger Things, Vol.1 (a Netflix Original Series SoundTrack)</h2>
+                                    <p class="name-song__subtitle">Kyle Dixon & Michael Stein</p>
+                                </div>
+                                <div class="col">
+                                    <img src="./img/aquietplace.jpeg" alt="">
+                                    <h2 class="name-song">A quiet place</h2>
+                                    <p class="name-song__subtitle">Subtitle</p>
+                                </div>
+                                <div class="col">
+                                    <img src="./img/split.jpeg" alt="">
+                                    <h2 class="name-song">Split</h2>
+                                    <p class="name-song__subtitle">Subtitle</p>
+                                </div>
+                                <div class="col">
+                                    <img src="./img/cure.jpeg" alt="">
+                                    <h2 class="name-song">A cure for welness</h2>
+                                    <p class="name-song__subtitle">Subtitle</p>
+                                </div>
+                                <div class="col">
+                                    <img src="./img/sinister.jpeg" alt="">
+                                    <h2 class="name-song">Sinister</h2>
+                                    <p class="name-song__subtitle">Subtitle</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="for-you">
+                            <h1 class="for-you__title">Creato per John Doe</h1>
+                            <p class="for-you__subtitle">Più ascolti, più accurati saranno i tuoi suggerimenti</p>
+                            <div class="row">
+                                <div class="col">
+                                    <img src="./img/radar.jpeg" alt="">
+                                    <h2 class="name-song">Release Radar</h2>
+                                </div>
+                                <div class="col">
+                                    <img src="./img/mixdaily.jpeg" alt="">
+                                    <h2 class="name-song">Daily Mix 1</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="artist">
+                            <h1 class="for-you__title">Artisti più popolari</h1>
+                            <p class="for-you__subtitle">Più ascolti, più accurati saranno i tuoi suggerimenti</p>
+                            <div class="row">
+                                <div class="col">
+                                    <img class="artist__img" src="./img/youg.jpeg" alt="">
+                                    <h2 class="name-song">Release Radar</h2>
+                                </div>
+                                <div class="col">
+                                    <img class="artist__img" src="./img/einaudi.jpeg" alt="">
+                                    <h2 class="name-song">Daily Mix 1</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
 
             </div>
+
         </div>
 
         <div class="player-bar">
 
-            <div class="album-preview">
+            <div class="col__player-bar album-preview">
                 <div class="album-preview__song">
                     <figure>
                         <img src="./img/sinister.jpeg" alt="">
@@ -39,7 +152,7 @@
                 </div>
             </div>
 
-            <div class="player-wrapper">
+            <div class="col__player-bar player-wrapper">
                 <div class="player-wrapper__icon">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
@@ -58,7 +171,18 @@
                 </div>
             </div>
 
-            <div class="controls">
+            <div class="col__player-bar controls">
+
+                <div class="controls__icon">
+                    <i class="fa-solid fa-list"></i>
+                    <i class="fa-solid fa-display"></i>
+                </div>
+                <div class="controls__sound">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <div class="controls__sound__bar">
+
+                    </div>
+                </div>
 
             </div>
         </div>
