@@ -75,17 +75,20 @@ PLAYER BAR
 .album-preview{
     display: flex;
     align-items: center;
-    gap: 42px;
+    justify-content: space-between;
+    width: 230px;
 }
 
 .album-preview__song {
     display: flex;
     align-items: center;
+    margin-right: 10px;
 }
 
 .album-preview figure{
     width: 42px;
     margin-right: 12px;
+    flex-shrink: 0;
 }
 
 .album-preview__title p:first-child{
@@ -110,6 +113,7 @@ PLAYER BAR
     align-items: center;
     row-gap: 11px;
     margin: 0 45px;
+    flex-basis: 30%;
 }
 
 .player-wrapper__icon{
@@ -148,7 +152,8 @@ PLAYER BAR
 
 .controls{
     display: flex;
-    justify-content: end;
+    align-items: center;
+    width: 230px;
 }
 
 .controls__icon{
@@ -158,42 +163,32 @@ PLAYER BAR
 }
 
 .controls__sound{
-    display: flex;
+    display: contents;
     gap: 14px;
     align-items: center;
-    width: 146px;
+    width: 230px;
 }
 
 .controls__sound__bar{
-    width: 100%;
+    flex-grow: 1;
     height: 4px;
     background-color: gray;
+    margin-left: 17px;
+    border-radius: 999px;
 }
 
-.col__player-bar{
-    flex-basis: calc(100%/3);
+.progress{
+    width: 25%;
+    height: 4px;
+    background-color: white;
+    border-radius: 999px;
 }
 
 @media only screen and (max-width:640px){
-
-    .album-preview{
-        gap: 29px;
-    }
-
     .album-preview__icon{
         flex-direction: column;
+        gap: 6px;
     }
-
-    .controls__icon{
-        gap: 14px;
-        margin-right: 14px;
-    }
-
-
-    .controls__sound__bar{
-        width: 104px;
-    }
-   
 }
 
 /*******************
@@ -209,6 +204,7 @@ SIDE BAR
     padding-top: 13px;
     flex-shrink: 0;
     overflow-y: hidden;
+    font-weight: bold;
 }
 
 .my-playlist{
@@ -219,6 +215,10 @@ SIDE BAR
     width: 130px;
     margin-bottom: 30px;
     color: white;
+}
+
+.logo-small{
+    display: none;
 }
 
 .search{
@@ -291,8 +291,29 @@ SIDE BAR
 }
 
 @media only screen and (max-width:553px){
-    .side-bar:not(.search .side-bar__icon)>*{
+    .logo{
         display: none;
+    }
+
+    .logo-small{
+        display: block;
+        margin-bottom: 17px;
+    }
+
+    .search span{
+        display: none;
+    }
+
+    .my-playlist{
+        display: none;
+    }
+
+    .account span{
+        display: none;
+    }
+
+    .account{
+        margin-top: auto;
     }
 }
 
@@ -388,4 +409,21 @@ MAIN BAR
 .artist__img{
     border-radius: 999px;
     object-fit: cover;
+}
+
+@media only screen and (max-width:640px){
+    .col{
+        flex-basis: calc(100% / 2 - 15px / 2);
+    }
+}
+
+@media only screen and (max-width:553px){
+    .col img{
+        width: 100%;
+    }
+
+    .col{
+        flex-basis: calc(100% / 2 - 15px / 2);
+        max-width: 100%;
+    }
 }

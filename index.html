@@ -18,12 +18,12 @@
         <div class="main-content">
             <div class="side-bar">
                 <img class="logo" src="./img/logo.svg" alt="">
-
+                <img class="logo-small" src="./img/logo-small.svg" alt="">
                 <div class="search">
-                        <p><i class="side-bar__icon fa-solid fa-house"></i>Home</p>
-                        <p><i class="side-bar__icon fa-solid fa-magnifying-glass"></i>Cerca</p>
-                        <p><i class="side-bar__icon fa-solid fa-lines-leaning"></i>La tua libreria</p>
-                </div>
+                        <p><i class="side-bar__icon fa-solid fa-house"></i><span>Home</span></p>
+                        <p><i class="side-bar__icon fa-solid fa-magnifying-glass"></i><span>Cerca</span></p>
+                        <p><i class="side-bar__icon fa-solid fa-lines-leaning"></i><span>La tua libreria</span></p>
+                </div> 
 
                 <div class="my-playlist">
                     <h4 class="my-playlist__title">PLAYLIST</h4>
@@ -40,9 +40,9 @@
                 </div>
                 
                 <div class="account">
-                    <p class="account__installer"><i class="side-bar__icon fa-regular fa-circle-down"></i>Installa app</p>
+                    <p class="account__installer"><i class="side-bar__icon fa-regular fa-circle-down"></i><span>Installa app</span></p>
                     <hr>
-                    <p class="account__user"><i class="side-bar__icon user fa-regular fa-user"></i>John Doe</p>
+                    <p class="account__user"><i class="side-bar__icon user fa-regular fa-user"></i><span>John Doe</span></p>
                 </div>
             </div>
 
@@ -136,7 +136,7 @@
 
         <div class="player-bar">
 
-            <div class="col__player-bar album-preview">
+            <div class="album-preview">
                 <div class="album-preview__song">
                     <figure>
                         <img src="./img/sinister.jpeg" alt="">
@@ -152,7 +152,7 @@
                 </div>
             </div>
 
-            <div class="col__player-bar player-wrapper">
+            <div class="player-wrapper">
                 <div class="player-wrapper__icon">
                     <i class="fa-solid fa-shuffle"></i>
                     <i class="fa-solid fa-backward-step"></i>
@@ -171,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="col__player-bar controls">
+            <div class="controls">
 
                 <div class="controls__icon">
                     <i class="fa-solid fa-list"></i>
@@ -180,7 +180,9 @@
                 <div class="controls__sound">
                     <i class="fa-solid fa-volume-high"></i>
                     <div class="controls__sound__bar">
+                        <div class="progress">
 
+                        </div>
                     </div>
                 </div>
 
