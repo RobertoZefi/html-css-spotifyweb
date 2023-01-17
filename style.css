@@ -254,12 +254,14 @@ SIDE BAR
     display: flex;
     flex-direction: column;
     color: grey;
-    position: relative;
-    padding: 0 13px;
     padding-top: 13px;
     flex-shrink: 0;
     overflow-y: hidden;
     font-weight: bold;
+}
+
+.side-bar__padding{
+    padding: 0 21px;
 }
 
 .my-playlist{
@@ -269,18 +271,37 @@ SIDE BAR
 .logo{
     width: 130px;
     margin-bottom: 30px;
+    margin-left: 21px;
     color: white;
 }
 
 .logo-small{
     display: none;
+    width: 28px;
+}
+
+.home, .cerca, .libreria{
+    width: 28px;
+    opacity: 0.5;
+}
+
+.profile{
+    width: 28px;
+    aspect-ratio: 1;
+    background-color: gray;
+    border-radius: 999px;
+}
+
+.search__item{
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    margin-bottom: 9px;
+    position: relative;
 }
 
 .search{
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-bottom: 26px;
+    margin-bottom: 17px;
 }
 
 .my-playlist__title{
@@ -313,10 +334,13 @@ SIDE BAR
 }
 
 .account__user{
-    margin-top: 12px;
+    padding-top: 12px;
+    margin-bottom: 5px;
     display: flex;
     align-items: center;
     color: white;
+    gap: 9px;
+    border-top: 1px solid gray;
 }
 
 .side-bar__icon{
@@ -346,6 +370,18 @@ SIDE BAR
 }
 
 @media only screen and (max-width:553px){
+    .side-bar__padding{
+        padding: 0;
+    }
+
+    .home, .cerca, .libreria, .profile, .logo-small{
+        margin: 0 auto;
+    }
+
+    .side-bar{
+        padding: 0;
+    }
+
     .logo{
         display: none;
     }
@@ -353,9 +389,26 @@ SIDE BAR
     .logo-small{
         display: block;
         margin-bottom: 17px;
+        margin-top: 6px;
     }
 
-    .search span{
+    .search__item p{
+        display: none;
+    }
+
+    .account__user p{
+        display: none;
+    }
+
+    .account__user{
+        border-top: 0;
+    }
+
+    .account__installer .side-bar__icon{
+        margin: 0 auto;
+    }
+
+    .search__item::before{
         display: none;
     }
 
@@ -372,20 +425,38 @@ SIDE BAR
     }
 }
 
-.side-bar p:hover, span:hover{
-    color: white;
-}
 
-.plus:hover{
+
+.my-playlist__sub-title:hover .plus{
     background-color: white;
 }
 
-.side-bar .home{
+.my-playlist__sub-title:hover span{
+    color: white;
+}
+
+.my-playlist__collection>*:hover{
+    color: white;
+}
+
+.search__item:hover >*{
+    color: white;
+    opacity: 1;
+}
+
+.search__item:hover::before{
+    content: '';
     position: absolute;
     left: 0;
-    border-left: 3px solid greenyellow;
-    height: 24px;
+    border: 2px solid greenyellow;
+    height: 100%;
 }
+
+
+.account__installer:hover{
+    color: white;
+}
+
 
 /*******************
 MAIN BAR
@@ -432,10 +503,20 @@ MAIN BAR
     margin: 0 44px;
 }
 
-.evidenza{
-    border-bottom: 3px solid greenyellow;
-    padding-bottom: 6px;
-    color: white
+.option{
+    position: relative;
+    display: block;
+    content: '';
+    padding-bottom: 5px;
+}
+
+.option:hover::after{
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid greenyellow;
+    width: 30px;
+    bottom: 0;
+    right: 50%;
 }
 
 .main-bar__option>*:hover{

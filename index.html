@@ -20,14 +20,27 @@
                 <img class="logo" src="./img/logo.svg" alt="">
                 <img class="logo-small" src="./img/logo-small.svg" alt="">
                 <div class="search">
-                        <p><span class="home"></span><i class="side-bar__icon fa-solid fa-house"></i><span>Home</span></p>
-                        <p><i class="side-bar__icon fa-solid fa-magnifying-glass"></i><span>Cerca</span></p>
-                        <p><i class="side-bar__icon fa-solid fa-lines-leaning"></i><span>La tua libreria</span></p>
+
+                    <ul>
+                        <li class="search__item side-bar__padding">
+                            <img class="home" src="./img/home.svg" alt="">
+                            <p>Home</p>
+                        </li>
+                        <li class="search__item side-bar__padding">
+                            <img class="cerca" src="./img/search.svg" alt="">
+                            <p>Cerca</p>
+                        </li>
+                        <li class="search__item side-bar__padding">
+                            <img class="libreria" src="./img/libreria.svg" alt="">
+                            <p>La tua libreria</p>
+                        </li>
+                    </ul>
+                              
                 </div> 
 
-                <div class="my-playlist">
+                <div class="my-playlist side-bar__padding">
                     <h4 class="my-playlist__title">PLAYLIST</h4>
-                    <p class="my-playlist__sub-title"><i class="side-bar__icon plus fa-solid fa-plus"></i>Crea Playlist</p>
+                    <p class="my-playlist__sub-title"><i class="side-bar__icon plus fa-solid fa-plus"></i><span>Crea Playlist</span></p>
                     <div class="my-playlist__collection">
                         <p>Nome Playlist</p>
                         <p>Nome Playlist</p>
@@ -39,10 +52,12 @@
                     </div>
                 </div>
                 
-                <div class="account">
+                <div class="account side-bar__padding">
                     <p class="account__installer"><i class="side-bar__icon fa-regular fa-circle-down"></i><span>Installa app</span></p>
-                    <hr>
-                    <p class="account__user"><i class="side-bar__icon user fa-regular fa-user"></i><span>John Doe</span></p>
+                    <div class="account__user">
+                        <img class="profile" src="./img/profile.svg" alt="">
+                        <p>John Doc</p>   
+                    </div >   
                 </div>
             </div>
 
@@ -53,12 +68,12 @@
 
                 <main class="main-bar__body">
                     <div class="main-bar__option">
-                        <a class="evidenza" href="">IN EVIDENZA</a>
-                        <a href="">PODCAST</a>
-                        <a href="">CLASSIFICHE</a>
-                        <a href="">GENERI E MOOD</a>
-                        <a href="">NUOVE USCITE</a>
-                        <a href="">SCOPRI</a>
+                        <a class="option" href="">IN EVIDENZA</a>
+                        <a class="option" href="">PODCAST</a>
+                        <a class="option" href="">CLASSIFICHE</a>
+                        <a class="option" href="">GENERI E MOOD</a>
+                        <a class="option" href="">NUOVE USCITE</a>
+                        <a class="option" href="">SCOPRI</a>
                     </div>
 
                     <div class="main-bar__album">
