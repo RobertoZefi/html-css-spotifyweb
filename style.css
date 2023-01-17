@@ -91,11 +91,11 @@ PLAYER BAR
     flex-shrink: 0;
 }
 
-.album-preview__title p:first-child{
+.group{
     font-weight: bold;
 }
 
-.album-preview__title p:last-child{
+.song{
     color: gray;
     font-size: 15px;
 }
@@ -103,6 +103,7 @@ PLAYER BAR
 .album-preview__icon{
     display: flex;
     gap: 15px;
+    color: gray;
 }
 
 
@@ -182,6 +183,19 @@ PLAYER BAR
     height: 4px;
     background-color: white;
     border-radius: 999px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pallina{
+    position: absolute;
+    right: 0;
+    width: 13px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 999px;
+    display: none;
 }
 
 @media only screen and (max-width:640px){
@@ -189,6 +203,47 @@ PLAYER BAR
         flex-direction: column;
         gap: 6px;
     }
+}
+
+.song:hover{
+    color: white;
+    text-decoration: underline;
+}
+
+.heart:hover{
+    color: white;
+}
+
+.folder:hover{
+    color: white;
+}
+
+.progress:hover .pallina{        
+    display: block;   
+}
+
+.bar:hover .pallina{        
+    display: block;   
+}
+
+.controls__sound__bar:hover .pallina{        
+    display: block;   
+}
+
+.controls__sound__bar:hover .progress{        
+    background-color: greenyellow;   
+}
+
+.bar:hover .progress{        
+    background-color: greenyellow;   
+}
+
+.progress:hover{
+    background-color: greenyellow;
+}
+
+.play:hover{
+    font-size: 35px;
 }
 
 /*******************
@@ -317,6 +372,21 @@ SIDE BAR
     }
 }
 
+.side-bar p:hover, span:hover{
+    color: white;
+}
+
+.plus:hover{
+    background-color: white;
+}
+
+.side-bar .home{
+    position: absolute;
+    left: 0;
+    border-left: 3px solid greenyellow;
+    height: 24px;
+}
+
 /*******************
 MAIN BAR
 *******************/
@@ -333,6 +403,8 @@ MAIN BAR
     align-items: center;
     position: sticky;
     top: 0;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .header-button{
@@ -342,6 +414,10 @@ MAIN BAR
     margin-right: 5px;
     font-weight: bold;
     font-size: 15px;
+}
+
+.header-button:hover{
+    scale: 1.1;
 }
 
 .main-bar__option{
@@ -356,6 +432,16 @@ MAIN BAR
     margin: 0 44px;
 }
 
+.evidenza{
+    border-bottom: 3px solid greenyellow;
+    padding-bottom: 6px;
+    color: white
+}
+
+.main-bar__option>*:hover{
+    color: white;
+}
+
 .main-bar__album{
     padding: 0 20px;
 }
@@ -366,24 +452,27 @@ MAIN BAR
 
 .recently__title{
     margin-bottom: 36px;
+    font-size: 30px;
+    font-weight: 800;
 }
 
 .col{
     text-align: center;
-    max-width: 177px;
+    width: calc(100% / 6 - 75px / 6);
 }
 
-.col img{
-    margin-bottom: 20px;
-    width: 177px;
+.img-album{
+    position: relative;
 }
 
 .name-song{
+    margin-top: 20px;
     margin-bottom: 15px;
 }
 
 .name-song__subtitle{
     color: gray;
+    font-weight: bold;
 }
 
 .row{
@@ -393,22 +482,34 @@ MAIN BAR
 
 
 
+
+
+
 .for-you{
     margin-bottom: 34px;
 }
 
 .for-you__title{
     margin-bottom: 16px;
+    font-size: 30px;
+    font-weight: 800;
 }
 
 .for-you__subtitle{
     margin-bottom: 30px;
     color: gray;
+    font-weight: bold;
 }
 
 .artist__img{
     border-radius: 999px;
     object-fit: cover;
+}
+
+@media only screen and (max-width:879px){
+    .col{
+        width: calc(100% / 4 - 75px / 6);
+    }
 }
 
 @media only screen and (max-width:640px){
@@ -426,4 +527,21 @@ MAIN BAR
         flex-basis: calc(100% / 2 - 15px / 2);
         max-width: 100%;
     }
+}
+
+.play__album{
+    position: absolute;
+    font-size: 70px;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    display: none;
+}
+
+.img-album:hover .play__album{
+    display: block;
+}
+
+.img-album:hover  img{
+    opacity: 0.5;
 }

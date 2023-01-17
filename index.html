@@ -8,8 +8,8 @@
     <script src="https://kit.fontawesome.com/4161a56faa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
                 <img class="logo" src="./img/logo.svg" alt="">
                 <img class="logo-small" src="./img/logo-small.svg" alt="">
                 <div class="search">
-                        <p><i class="side-bar__icon fa-solid fa-house"></i><span>Home</span></p>
+                        <p><span class="home"></span><i class="side-bar__icon fa-solid fa-house"></i><span>Home</span></p>
                         <p><i class="side-bar__icon fa-solid fa-magnifying-glass"></i><span>Cerca</span></p>
                         <p><i class="side-bar__icon fa-solid fa-lines-leaning"></i><span>La tua libreria</span></p>
                 </div> 
@@ -53,7 +53,7 @@
 
                 <main class="main-bar__body">
                     <div class="main-bar__option">
-                        <a href="">IN EVIDENZA</a>
+                        <a class="evidenza" href="">IN EVIDENZA</a>
                         <a href="">PODCAST</a>
                         <a href="">CLASSIFICHE</a>
                         <a href="">GENERI E MOOD</a>
@@ -66,32 +66,50 @@
                             <h1 class="recently__title">Recently played</h1>
                             <div class="row">
                                 <div class="col">
-                                    <img src="./img/metal_lifting.jpg" alt="">
+                                    <figure class="img-album">
+                                        <img src="./img/metal_lifting.jpg" alt="">
+                                        <i class="play__album fa-regular fa-circle-play"></i>
+                                    </figure>
                                     <h2 class="name-song">Heavy Metal</h2>
                                     <p class="name-song__subtitle">Subtitle</p>
                                 </div>
                                 <div class="col">
-                                    <img src="./img/stranger.jpeg" alt="">
-                                    <h2 class="name-song">Stranger Things, Vol.1 (a Netflix Original Series SoundTrack)</h2>
+                                    <figure class="img-album">
+                                        <img src="./img/stranger.jpeg" alt="">
+                                        <i class="play__album fa-regular fa-circle-play"></i>
+                                    </figure>                
+                                    <h2 class="name-song"></h2>
                                     <p class="name-song__subtitle">Kyle Dixon & Michael Stein</p>
                                 </div>
                                 <div class="col">
-                                    <img src="./img/aquietplace.jpeg" alt="">
+                                    <figure class="img-album">
+                                        <img src="./img/aquietplace.jpeg" alt="">
+                                        <i class="play__album fa-regular fa-circle-play"></i>
+                                    </figure>
                                     <h2 class="name-song">A quiet place</h2>
                                     <p class="name-song__subtitle">Subtitle</p>
                                 </div>
                                 <div class="col">
-                                    <img src="./img/split.jpeg" alt="">
+                                    <figure class="img-album">
+                                        <img src="./img/split.jpeg" alt="">
+                                        <i class="play__album fa-regular fa-circle-play"></i>
+                                    </figure>
                                     <h2 class="name-song">Split</h2>
                                     <p class="name-song__subtitle">Subtitle</p>
                                 </div>
                                 <div class="col">
-                                    <img src="./img/cure.jpeg" alt="">
+                                    <figure class="img-album">
+                                        <img src="./img/cure.jpeg" alt="">
+                                        <i class="play__album fa-regular fa-circle-play"></i>
+                                    </figure>
                                     <h2 class="name-song">A cure for welness</h2>
                                     <p class="name-song__subtitle">Subtitle</p>
                                 </div>
                                 <div class="col">
-                                    <img src="./img/sinister.jpeg" alt="">
+                                    <figure class="img-album">
+                                        <img src="./img/sinister.jpeg" alt="">
+                                        <i class="play__album fa-regular fa-circle-play"></i>
+                                    </figure>
                                     <h2 class="name-song">Sinister</h2>
                                     <p class="name-song__subtitle">Subtitle</p>
                                 </div>
@@ -102,11 +120,11 @@
                             <h1 class="for-you__title">Creato per John Doe</h1>
                             <p class="for-you__subtitle">Più ascolti, più accurati saranno i tuoi suggerimenti</p>
                             <div class="row">
-                                <div class="col">
+                                <div class="col for-you__col">
                                     <img src="./img/radar.jpeg" alt="">
                                     <h2 class="name-song">Release Radar</h2>
                                 </div>
-                                <div class="col">
+                                <div class="col for-you__col">
                                     <img src="./img/mixdaily.jpeg" alt="">
                                     <h2 class="name-song">Daily Mix 1</h2>
                                 </div>
@@ -142,13 +160,13 @@
                         <img src="./img/sinister.jpeg" alt="">
                     </figure>
                     <div class="album-preview__title">
-                        <p>Sinister</p>
-                        <p>Brano Nome</p>
+                        <p class="group">Sinister</p>
+                        <p class="song">Brano Nome</p>
                     </div>
                 </div>
                 <div class="album-preview__icon">
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-folder"></i>
+                    <i class="heart fa-regular fa-heart"></i>
+                    <i class="folder fa-regular fa-folder"></i>
                 </div>
             </div>
 
@@ -164,7 +182,7 @@
                     <p>0:25</p>
                     <div class="bar">
                         <div class="progress">
-
+                            <div class="pallina"></div>
                         </div>
                     </div>
                     <p>4:35</p>
@@ -181,7 +199,7 @@
                     <i class="fa-solid fa-volume-high"></i>
                     <div class="controls__sound__bar">
                         <div class="progress">
-
+                            <div class="pallina"></div>
                         </div>
                     </div>
                 </div>
