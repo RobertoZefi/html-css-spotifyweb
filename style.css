@@ -465,6 +465,10 @@ MAIN BAR
     position: relative;
 }
 
+.img-album img{
+    width: 100%;
+}
+
 .name-song{
     margin-top: 20px;
     margin-bottom: 15px;
@@ -489,6 +493,14 @@ MAIN BAR
     margin-bottom: 34px;
 }
 
+.for-you img{
+    width: 100%;
+}
+
+.artist img{
+    width: 100%;
+}
+
 .for-you__title{
     margin-bottom: 16px;
     font-size: 30px;
@@ -499,6 +511,7 @@ MAIN BAR
     margin-bottom: 30px;
     color: gray;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .artist__img{
@@ -510,11 +523,36 @@ MAIN BAR
     .col{
         width: calc(100% / 4 - 75px / 6);
     }
+
+    .name-song{
+        font-size: 18px
+    }
+
+    .name-song__subtitle{
+        font-size: 14px;
+    }
+
+    .col .play__album{
+        font-size: 45px;
+    }
+
+    .recently__title, .for-you__title{
+        font-size: 27px;
+    }
+
+    .for-you__subtitle{
+        font-size: 14px;
+    }
+
 }
 
 @media only screen and (max-width:640px){
     .col{
         flex-basis: calc(100% / 2 - 15px / 2);
+    }
+
+    .col .play__album{
+        font-size: 58px;
     }
 }
 
@@ -526,6 +564,10 @@ MAIN BAR
     .col{
         flex-basis: calc(100% / 2 - 15px / 2);
         max-width: 100%;
+    }
+
+    .col .play__album{
+        font-size: 60px;
     }
 }
 
